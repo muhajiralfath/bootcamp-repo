@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="engine-beans.xml" />
+
+    <bean id="ayla" class="com.enigma.di.bean.Car">
+        <constructor-arg name="name" value="ayla" />
+        <constructor-arg name="color" value="white" />
+        <constructor-arg name="brand" value="daihatsu" />
+        <constructor-arg name="engine" ref="gasolineEngine" />
+    </bean>
+
+
+</beans>
