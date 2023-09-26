@@ -1,0 +1,30 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card text-center">
+    <div class="card-header">Register</div>
+    <div class="card-body form-body">
+      <form [formGroup]="formRegist" (ngSubmit)="register(formRegist.value)" method="post">
+        <!-- Email input -->
+        <div class="form-outline outline-form mb-4">
+          <label class="form-label" for="form1Example1">Email address</label>
+          <input type="email" id="form1Example1" formControlName="email" class="form-control" />
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline outline-form mb-4">
+          <label class="form-label" for="form1Example2">Password</label>
+          <input type="password" id="form1Example2" formControlName="password" class="form-control" />
+        </div>
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+          <div class="col justify-content-end">
+            <a routerLink="/login">Sign in</a>
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-danger btn-block">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+

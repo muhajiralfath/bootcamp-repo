@@ -1,0 +1,14 @@
+.form-body  {
+  width: 450px;
+}
+
+.register  a  {
+  font-weight: lighter;
+  color: indianred;
+  text-decoration: none ;
+}
+
+.outline-form {
+  border: 1px solid;
+  border-radius: 6px;
+}
