@@ -1,0 +1,65 @@
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="dashboard">
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li><!-- End Profile Page Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#customer-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-person-circle"></i><span>Customer</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="customer-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a routerLink="customer-form" class="text-decoration-none">
+            <i class="bi bi-journal-text"></i><span>Customer Form</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="customer-list" class="text-decoration-none">
+            <i class="bi bi-layout-text-window-reverse"></i><span>Customer List</span>
+          </a>
+        </li>
+      </ul>
+    </li><!-- End Tables Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#product-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-boombox"></i><span>Product</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="product-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a routerLink="product-form" class="text-decoration-none">
+            <i class="bi bi-journal-text"></i><span>Product Form</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="product-list" class="text-decoration-none">
+            <i class="bi bi-layout-text-window-reverse"></i><span>Product List</span>
+          </a>
+        </li>
+      </ul>
+    </li><!-- End Tables Nav -->
+
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="transaction">
+        <i class="bi bi-clipboard-data"></i>
+        <span>Transaction</span>
+      </a>
+    </li><!-- End Register Page Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="/login">
+        <i class="bi bi-box-arrow-in-right"></i>
+        <span class="text-danger">Logout</span>
+      </a>
+    </li><!-- End Login Page Nav -->
+  </ul>
+
+</aside><!-- End Sidebar-->
