@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-4 mb-3" *ngFor="let anime of animes | slice: 0: limit">
+    <div class="card">
+      <div class="card-body">
+        <h2>{{ anime.name }}</h2>
+        <div>
+          <img src="{{ anime.cover }}" alt="" width="100%">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center mt-3" *ngIf="animes.length > 3">
+  <button class="btn btn-primary" (click)="loadMore()" >
+    Load More
+    <div class="spinner-border spinner-border-sm ml-2" *ngIf="loading"></div>
+  </button>
+</div>

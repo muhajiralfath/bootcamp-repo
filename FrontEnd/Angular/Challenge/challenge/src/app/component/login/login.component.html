@@ -1,0 +1,19 @@
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100 bg-dark">
+  <div class="card m-lg-5 p-4" style="width: 40rem; height: fit-content">
+    <div class="card-body p-4">
+      <h1 class="text-center" style="text-align: left">Login Page</h1>
+      <hr>
+      <h5 class="mt-5">Email</h5>
+      <input type="email" placeholder="Enter email" class="form-control"
+             (input)="onEmail($event)"/>
+
+      <h5 class="mt-2">Password</h5>
+      <input type="password" placeholder="Enter password" class="form-control"
+             (input)="onPassword($event)"/>
+
+      <div class="text-center mt-5">
+        <button type="submit" (click)="login()" class="btn btn-primary px-4 w-25 py-2">Login</button>
+      </div>
+    </div>
+  </div>
+</div>

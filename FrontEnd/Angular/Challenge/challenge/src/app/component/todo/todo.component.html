@@ -1,0 +1,56 @@
+<div class="container vh-100">
+  <div class="card text-center">
+    <div class="w-25 m-auto">
+      <img src="./assets/images/todo-logo.png" class="card-img-top" alt="...">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Todo List Aplication</h5>
+      <p class="card-text">Make Your to do list to manage your day</p>
+
+    </div>
+  </div>
+  <div class="d-flex align-items-center justify-content-center">
+    <button type="button" (click)="logout()" class="btn btn-danger px-5 border align-self-start"
+            style="width: fit-content; font-weight: bold"
+    >Logout
+    </button>
+  </div>
+  <div class="card text-center w-50 m-auto mb-3">
+    <div class="card-body">
+      <div class="input-group mb-3 d-flex flex-column">
+        <input [(ngModel)]="taskTitle" type="text" class="form-control w-auto mb-1" placeholder="Tittle"
+               aria-label="Recipient's username"
+               aria-describedby="button-addon2">
+        <input [(ngModel)]="taskDesc" type="text" class="form-control w-auto" placeholder="Description"
+               aria-label="Recipient's username"
+               aria-describedby="button-addon2">
+      </div>
+      <button (click)="addTask()" class="btn btn-primary">Add Todo</button>
+    </div>
+  </div>
+
+  <div class="w-75 m-auto">
+    <table class="table">
+      <thead class="table-dark">
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Handle</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let li of list; let i = index">
+      <tr>
+        <th scope="row">{{[i + 1]}}</th>
+        <td><span [ngStyle]="{'text-decoration' : li.isDone ? 'line-through' : 'none'}">{{li.title}}</span></td>
+        <td><p [ngStyle]="{'text-decoration' : li.isDone ? 'line-through' : 'none'}">{{li.desc}}</p></td>
+        <td>
+          <button class="btn btn-warning" (click)="toggleDone(li)">{{ li.isDone ? 'Cancel' : 'Done' }}</button>
+          <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

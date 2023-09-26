@@ -1,0 +1,8 @@
+<div *ngIf="!account.isLogin; else form_list">
+  <app-login (loginEvent)="handleLoginEvent($event)"></app-login>
+</div>
+
+<ng-template #form_list>
+  <app-form [account]="account"></app-form>
+</ng-template>
+
